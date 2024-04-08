@@ -58,6 +58,13 @@ class MainWindow(QMainWindow, form_class):  # 슬롯 클래스
     def fillCoinData(self, trade_price, high_price, low_price, prev_closing_price,
                      trade_volume, acc_trade_volume_24h, acc_trade_price_24h, signed_change_rate):
         self.trade_price.setText(f"{trade_price:,.0f}")
+        self.high_price.setText(f"{high_price:,.0f}")
+        self.low_price.setText(f"{low_price:,.0f}")
+        self.closing_price.setText(f"{prev_closing_price:,.0f}")
+        self.trade_volume.setText(f"{trade_volume:,.3f}")
+        self.trade_volume_24h.setText(f"{acc_trade_volume_24h:,.3f}")
+        self.trade_price_24h.setText(f"{acc_trade_price_24h:,.0f}")
+        self.change_rate.setText(f"{signed_change_rate:.2f}")
 
 
 if __name__ == "__main__":

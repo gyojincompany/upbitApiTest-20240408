@@ -82,7 +82,7 @@ class MainWindow(QMainWindow, form_class):  # 슬롯 클래스
 
         # KRW- 를 제거 텍스트를 리스트로 생성
         for ticker in tickerList:
-            coinList.append(ticker[4:])
+            coinList.append(ticker[4:])  # KRW- 를 제거
 
         coinList.remove("BTC")  # 리스트에 btc 제거
         coinList = sorted(coinList)  # BTC를 제외한 나머지 코인리스트 오름차순으로 정렬

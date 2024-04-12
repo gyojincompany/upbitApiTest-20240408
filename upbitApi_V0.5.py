@@ -32,6 +32,7 @@ class UpbitCall(QThread):
             acc_trade_price_24h = result[0]["acc_trade_price_24h"]  # 24시간 누적 거래대금
             signed_change_rate = result[0]["signed_change_rate"]  # 부호가 있는 변화율
 
+            # 메인윈도우 클래스로 받아온 데이터를 전송
             self.coinDataSent.emit(
                 float(trade_price),
                 float(high_price),
